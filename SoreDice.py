@@ -26,6 +26,7 @@ for animal in animals:
 	animalSets[animal] = list(filter(lambda a: a != '', animalSets[animal]))
 	#removing duplicate words
 	animalSets[animal] = list(dict.fromkeys(animalSets[animal]))
+	
 
 def SorenDiceSimilarity(a, b):
 	setA = set(a)

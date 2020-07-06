@@ -45,6 +45,7 @@ for animal in animals:
 	#removing empty elements from sets
 	animalSets[animal] = list(filter(lambda a: a != '', animalSets[animal]))
 
+
 #I generate the vocabulary for the BoW
 vocab = []
 for animal in animals:
@@ -65,7 +66,7 @@ cosSim = {}
 for animal in animals:
 	print("Calculating cosine similarity for cat and "+animal+"...")
 	cosSim[animal] = cosineSimilarity(animalBoW["cat"], animalBoW[animal])
-	print("The result was:"+str(cosSim[animal])+"")
+	print("The result was: "+str(cosSim[animal])+"")
 
 print("Sorting the coefficient in descending order, we have the result:")
 print(sorted(cosSim.items(), key = lambda k:k[1], reverse=True)) 
