@@ -68,9 +68,15 @@ for animal in animals:
 	cosSim[animal] = cosineSimilarity(animalBoW["cat"], animalBoW[animal])
 	print("The result was: "+str(cosSim[animal])+"")
 
-print("Sorting the coefficient in descending order, we have the result:")
-print(sorted(cosSim.items(), key = lambda k:k[1], reverse=True)) 
+print("Sorting the cosine similarity in descending order, we have the result:")
+cosSim = sorted(cosSim.items(), key = lambda k:k[1], reverse=True)
 
+i = 0
+for animal in animals:
+	print (cosSim[i])
+	i = i + 1
 
+for animal in animals:
+	animalFiles[animal].close()
 
 

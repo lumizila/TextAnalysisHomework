@@ -46,8 +46,12 @@ for animal in animals:
 	print("The Sorensen-Dice coefficient that resulted was:  "+str(sorenResult[animal]))
 
 print("Sorting the coefficient in descending order, we have the result:")
-print(sorted(sorenResult.items(), key = lambda k:k[1], reverse=True)) 
+sorenResult = sorted(sorenResult.items(), key = lambda k:k[1], reverse=True) 
 
+i = 0
+for animal in animals:
+	print (sorenResult[i])
+	i = i + 1
 
 for animal in animals:
 	animalFiles[animal].close()
