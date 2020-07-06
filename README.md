@@ -121,4 +121,5 @@ One interesting fact I would like to point out is that the Sørensen–Dice coef
 One surprise for me was that horse apparently has a similar description to that or cat since it scored well on both methods used to compare similarity. 
 
 **Code to the programs**
-The code can be found on 
+
+The code can be found on: https://github.com/lumizila/TextAnalysisHomework 
