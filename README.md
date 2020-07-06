@@ -9,8 +9,6 @@ Requeriments:
 - Use at least 2 representation methods of documents
 - Use at least 2 distance metrics
 
-**Files of this homework**
-
 **Input Documents**
 
 For this homework, I created 10 text documents based on the introduction text on the following Wikipedia pages:
@@ -87,7 +85,7 @@ The Sørensen–Dice coefficients are calculated by running the code with the co
 ```
 python3 SoreDice.py 
 ```
-The Sørensen–Dice coefficients for each pair can be seen below:
+The Sørensen–Dice coefficients output can be seen below:
 
 ```
 Sorting the coefficient in descending order, we have the result:
@@ -105,8 +103,22 @@ Sorting the coefficient in descending order, we have the result:
 
 **Discussion**
 
+According to my own human logic, I believe that if we compare description of cats to those of other animals, the results should be in an order of similarity such as:
 
-As seen by the results of the execution, Cosine Similarity performed way better according to my expectations. 
+1. Other felines (in this case lion and jaguar)
+2. Other mammal land animals (in this case dog, fox and horse)
+3. Other mammals (dolphin)
+4. Birds (eagle)
+5. Fish (shark)
+6. Insects (ant)
+
+As seen by the results of the execution, Cosine Similarity performed way better according to my expectations described above. 
+
+I believe one reason why the results Sørensen–Dice coefficients might be worse is that I did not remove from the text words that are not specifically associated to anything, such as "the", "is", "it", "a", etc. 
+
+One interesting fact I would like to point out is that the Sørensen–Dice coefficients were performing more according to my expectations before I decided to make all words in the texts lowercase. I believe this is due to the fact that important words that define an animal such as "feline" for cats/lions/jaguars would be often duplicated, one with uppercase and other with lowercase. This added an unintended benefit in comparing the texts. 
+
+One surprise for me was that horse apparently has a similar description to that or cat since it scored well on both methods used to compare similarity. 
 
 **Code to the programs**
 The code can be found on 
